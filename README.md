@@ -12,6 +12,8 @@ If you do, then this is DEFINITELY for you!
 
 Instead of rewriting an entrypoint for every container image, you can simply include this simple script, add a bootstrap directory, if necessary, set some variables, and Bob's your uncle! (Or words to that effect!)
 
+With the obvious advantage that due to its modular nature, this solution allows users to both bundle scripts and hot plug start up scripts.
+
 This is a drop-in replacement for both existing images and new images.
 
 ## Usage
