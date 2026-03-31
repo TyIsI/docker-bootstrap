@@ -1,0 +1,9 @@
+*
+!.gitignore
+
+!.editorconfig
+!docker_bootstrap.sh
+!*.md
+
+!bootstrap.d/
+!bootstrap.d/*
