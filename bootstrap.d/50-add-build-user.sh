@@ -8,7 +8,8 @@ BOOTSTRAP_BUILD_UNAME=${BOOTSTRAP_BUILD_UNAME:-build}
 BOOTSTRAP_BUILD_GNAME=${BOOTSTRAP_BUILD_GNAME:-build}
 BOOTSTRAP_BUILD_DIR=${BOOTSTRAP_BUILD_DIR:-/build}
 
-addgroup --gid "${BOOTSTRAP_BUILD_GID}" "${BOOTSTRAP_BUILD_GNAME}" &&
+echo -n "Adding build user ${BOOTSTRAP_BUILD_UNAME}..." &&
+    addgroup --gid "${BOOTSTRAP_BUILD_GID}" "${BOOTSTRAP_BUILD_GNAME}" &&
     adduser \
         --uid "${BOOTSTRAP_BUILD_UID}" \
         --gid "${BOOTSTRAP_BUILD_GID}" \
@@ -19,4 +20,5 @@ addgroup --gid "${BOOTSTRAP_BUILD_GID}" "${BOOTSTRAP_BUILD_GNAME}" &&
         --quiet \
         "${BOOTSTRAP_BUILD_UNAME}" &&
     mkdir -p "${BOOTSTRAP_BUILD_DIR}" &&
-    chown "${BOOTSTRAP_BUILD_UNAME}:${BOOTSTRAP_BUILD_GNAME}" "${BOOTSTRAP_BUILD_DIR}"
+    chown "${BOOTSTRAP_BUILD_UNAME}:${BOOTSTRAP_BUILD_GNAME}" "${BOOTSTRAP_BUILD_DIR}" &&
+    echo "done!"
