@@ -30,14 +30,15 @@ TLDR: Copy the script and set up your scripts.
 
 ## Environment Variables
 
-| Variable              | Description                                                                                                                                             | Default                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| BOOTSTRAP_BYPASS      | Disable executing bootstrap scripts                                                                                                                     | _none_ (any non '0' value enables this setting.) |
-| BOOTSTRAP_DIR         | Override default scripts directory                                                                                                                      | `/etc/bootstrap.d`                               |
-| BOOTSTRAP_DIRS        | Add more default script directories, which take precedence over the BOOTSTRAP_DIR                                                                       | _none_                                           |
-| BOOTSTRAP_ENTRYPOINT  | Call a legacy entrypoint that's not running from the CMD instruction                                                                                    | _none_                                           |
-| BOOTSTRAP_SHELL       | Override default shell                                                                                                                                  | `/bin/sh`                                        |
-| CUSTOM_BOOTSTRAP_DIRS | Custom directories for bootstrap scripts. This allows you to add additional directories for more custom scripts that might expand on an existing image. | _none_                                           |
+| Variable              | Description                                                                                                                                             | Default                                                        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| BOOTSTRAP_BUILDONLY   | Disable executing entrypoint scripts                                                                                                                    | _none_ (any value other than '0' value enables this setting.)  |
+| BOOTSTRAP_BYPASS      | Disable executing bootstrap scripts                                                                                                                     | _none_ (any value other than  '0' value enables this setting.) |
+| BOOTSTRAP_DIR         | Override default scripts directory                                                                                                                      | `/etc/bootstrap.d`                                             |
+| BOOTSTRAP_DIRS        | Add more default script directories, which take precedence over the BOOTSTRAP_DIR                                                                       | _none_                                                         |
+| BOOTSTRAP_ENTRYPOINT  | Call a legacy entrypoint that's not running from the CMD instruction                                                                                    | _none_                                                         |
+| BOOTSTRAP_SHELL       | Override default shell                                                                                                                                  | `/bin/sh`                                                      |
+| CUSTOM_BOOTSTRAP_DIRS | Custom directories for bootstrap scripts. This allows you to add additional directories for more custom scripts that might expand on an existing image. | _none_                                                         |
 
 ## Contributing
 

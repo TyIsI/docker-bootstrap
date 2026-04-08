@@ -41,4 +41,8 @@ if [ "${BOOTSTRAP_BYPASS}" = "0" ]; then
     done
 fi
 
-exec ${BOOTSTRAP_ENTRYPOINT:-${BOOTSTRAP_SHELL} -c} "$*"
+BOOTSTRAP_BUILDONLY=${BOOTSTRAP_BUILDONLY:-false}
+
+if [ "${BOOTSTRAP_BUILDONLY}" = "false" ]; then
+    exec ${BOOTSTRAP_ENTRYPOINT:-${BOOTSTRAP_SHELL} -c} "$*"
+fi
