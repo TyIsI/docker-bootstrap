@@ -3,6 +3,7 @@
 
 !.editorconfig
 !docker_bootstrap.sh
+!install-docker-bootstrap.sh
 !*.md
 
 !docker-bootstrap.d/
