@@ -4,7 +4,7 @@ export DOCKER_BOOSTRAP_VERSION=0.0.1
 
 set -e
 
-BOOTSTRAP_BYPASS=${BOOTSTRAP_BYPASS:-0}
+BOOTSTRAP_BYPASS=${BOOTSTRAP_BYPASS:-false}
 
 BOOTSTRAP_SHELL="${BOOTSTRAP_SHELL:-$(realpath /bin/sh)}"
 SELF_SHELL=$(realpath /proc/$$/exe)
@@ -15,7 +15,7 @@ if [ "${BOOTSTRAP_SHELL}" != "${SELF_SHELL}" ]; then
     exec "${BOOTSTRAP_SHELL}" "$0" "$*"
 fi
 
-if [ "${BOOTSTRAP_BYPASS}" = "0" ]; then
+if [ "${BOOTSTRAP_BYPASS}" = "false" ]; then
     BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS:-}"
 
     BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS} ${BOOTSTRAP_DIR:-/etc/bootstrap.d}"
