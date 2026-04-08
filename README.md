@@ -66,7 +66,15 @@ You can install docker-bootstrap using any of the options below:
 | INSTALL_SCRIPT_DIR | The location to install the `docker_bootstrap.sh` script.                                                                                                                                                                                                                                                                                                                                         | `/`                                          |
 | INSTALL_SCRIPTS    | Names or URLs of scripts to install beyond the default scripts. These can also be specified through the command-line.      <br />  NOTE: If the script name does not start with a common URL protocol prefix (ftp/http/https), the install script will assume that they are located in the `docker-bootstrap.d` directory of the repository. This allows you to fetch scripts from a wget source. | ""                                           |
 
-#### Example
+#### Examples
+
+##### Quick bootstrap with runtime user generation
+
+```cli
+wget -q -O - https://raw.githubusercontent.com/TyIsI/docker-bootstrap/refs/heads/main/install-docker-bootstrap.sh | INSTALL_SCRIPTS=50-add-build-user.sh sh -
+```
+
+##### Directed
 
 The command below will install the main script into `/docker-bootstrap` while the extra scripts will be installed into `/docker-bootstrap/conf.d`. Besides the default banner script, the `50-add-build-user.sh` script will be installed.
 
