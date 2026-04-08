@@ -5,5 +5,5 @@
 !docker_bootstrap.sh
 !*.md
 
-!bootstrap.d/
-!bootstrap.d/*
+!docker-bootstrap.d/
+!docker-bootstrap.d/*

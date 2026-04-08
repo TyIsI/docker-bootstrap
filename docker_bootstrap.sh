@@ -18,7 +18,7 @@ fi
 if [ "${BOOTSTRAP_BYPASS}" = "false" ]; then
     BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS:-}"
 
-    BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS} ${BOOTSTRAP_DIR:-/etc/bootstrap.d}"
+    BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS} ${BOOTSTRAP_DIR:-/etc/docker-bootstrap.d}"
 
     if [ "${CUSTOM_BOOTSTRAP_DIR}" != "" ]; then
         BOOTSTRAP_DIRS="${BOOTSTRAP_DIRS} ${CUSTOM_BOOTSTRAP_DIR}"
